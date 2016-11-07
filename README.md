@@ -105,4 +105,43 @@ var response = await youzikuClient.GetBatchFontFaceAsync(param);
 ```
 ### 2.GetBatchWoffFontFace ()
 #### 备注：直接返回仅woff格式的@fontface
+同步调用
+``` csharp
+//构建一个请求参数
+var param2 = new BatchFontFaceParam();
+//开始构建生成项
+param2.Tags.Add(new FontFaceParam
+{
+     AccessKey = "xxx",
+     Content = "jamesbing-woff-1 Inc.",
+     Tag = "#t-woff-1"
+});
+param2.Tags.Add(new FontFaceParam
+{
+     AccessKey = "xxx",
+     Content = "jamesbing-woff-2 Inc.",
+     Tag = "#t-woff-2"
+});
 
+var response =  youzikuClient.GetBatchWoffFontFace(param2);
+```
+异步调用
+``` csharp
+//构建一个请求参数
+var param2 = new BatchFontFaceParam();
+//开始构建生成项
+param2.Tags.Add(new FontFaceParam
+{
+     AccessKey = "xxx",
+     Content = "jamesbing-woff-1 Inc.",
+     Tag = "#t-woff-1"
+});
+param2.Tags.Add(new FontFaceParam
+{
+     AccessKey = "xxx",
+     Content = "jamesbing-woff-2 Inc.",
+     Tag = "#t-woff-2"
+});
+
+var response = await youzikuClient.GetBatchWoffFontFaceAsync(param2);
+```
