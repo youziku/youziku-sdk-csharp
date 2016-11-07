@@ -14,7 +14,7 @@ namespace Sample
     {
         //初始化方式1
         //static IYouzikuServiceClient youzikuClient = new YouzikuServiceClient(new YouzikuConfig()
-        //{
+        //{ 
         //    Host = "http://service.youziku.com",
         //    ApiKey = "xxx"
         //});
