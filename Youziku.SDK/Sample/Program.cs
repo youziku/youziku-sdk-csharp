@@ -62,7 +62,7 @@ namespace Sample
 
             var response3 = await youzikuClient.GetBatchFontFaceAsync(param);
 
-            //4.GetBatchFontFace()接口
+            //4.GetBatchWoffFontFace()接口
             var param2 = new BatchFontFaceParam();
             param2.Tags.Add(new FontFaceParam
             {
