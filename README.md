@@ -18,8 +18,8 @@ public static readonly IYouzikuServiceClient youzikuClient = new YouzikuServiceC
 var response = youzikuClient.GetFontFace(new FontFaceParam
 {
     AccessKey = "xxx",
-    Content = "jamesbing Inc.",
-    Tag = "#gg"
+    Content = "有字库，让中文跃上云端！",
+    Tag = "#id1"
 });
 ```
 异步调用
@@ -27,8 +27,8 @@ var response = youzikuClient.GetFontFace(new FontFaceParam
 var response = await youzikuClient.GetFontFaceAsync(new FontFaceParam
 {
       AccessKey = "xxx",
-      Content = "jamesbing Inc.",
-      Tag = "#gg"
+      Content = "有字库，让中文跃上云端！",
+      Tag = "#id1"
 });
 ```
 ### 2.2 GetWoffBase64StringFontFace()
@@ -38,8 +38,8 @@ var response = await youzikuClient.GetFontFaceAsync(new FontFaceParam
 var response = youzikuClient.GetWoffBase64StringFontFace(new FontFaceParam
 {
     AccessKey = "xxx",
-    Content = "jamesbing Inc.",
-    Tag = "#gg"
+    Content = "有字库，让中文跃上云端！",
+    Tag = "#id1"
 });
 ```
 异步调用
@@ -47,8 +47,8 @@ var response = youzikuClient.GetWoffBase64StringFontFace(new FontFaceParam
 var response = await youzikuClient.GetWoffBase64StringFontFaceAsync(new FontFaceParam
 {
       AccessKey = "xxx",
-      Content = "jamesbing Inc.",
-      Tag = "#gg"
+      Content = "有字库，让中文跃上云端！",
+      Tag = "#id1"
 });
 ```
 ## 3.多标签生成模式
@@ -62,15 +62,15 @@ var param = new BatchFontFaceParam();
 param.Tags.Add(new FontFaceParam
 {
     AccessKey = "xxx",
-    Content = "jamesbing1 Inc.",
-    Tag = "#gg1"
+    Content = "有字库，让中文跃上云端！",
+    Tag = "#id1"
 });
 
 param.Tags.Add(new FontFaceParam
 {
     AccessKey = "xxx",
-    Content = "jamesbing2 Inc.",
-    Tag = "#gg2"
+    Content = "有字库，让中文跃上云端！",
+    Tag = ".class1"
 });
 var response =  youzikuClient.GetBatchFontFace(param);
 ```
@@ -82,15 +82,15 @@ var param = new BatchFontFaceParam();
 param.Tags.Add(new FontFaceParam
 {
     AccessKey = "xxx",
-    Content = "jamesbing1 Inc.",
-    Tag = "#gg1"
+    Content = "有字库，让中文跃上云端！",
+    Tag = "#id1"
 });
 
 param.Tags.Add(new FontFaceParam
 {
     AccessKey = "xxx",
-    Content = "jamesbing2 Inc.",
-    Tag = "#gg2"
+    Content = "有字库，让中文跃上云端！",
+    Tag = ".class1"
 });
 var response = await youzikuClient.GetBatchFontFaceAsync(param);
 ```
@@ -104,14 +104,14 @@ var param2 = new BatchFontFaceParam();
 param2.Tags.Add(new FontFaceParam
 {
      AccessKey = "xxx",
-     Content = "jamesbing-woff-1 Inc.",
-     Tag = "#t-woff-1"
+     Content = "有字库，让中文跃上云端！",
+     Tag = "#id1"
 });
 param2.Tags.Add(new FontFaceParam
 {
      AccessKey = "xxx",
-     Content = "jamesbing-woff-2 Inc.",
-     Tag = "#t-woff-2"
+     Content = "有字库，让中文跃上云端！",
+     Tag = ".class1"
 });
 
 var response =  youzikuClient.GetBatchWoffFontFace(param2);
@@ -124,14 +124,14 @@ var param2 = new BatchFontFaceParam();
 param2.Tags.Add(new FontFaceParam
 {
      AccessKey = "xxx",
-     Content = "jamesbing-woff-1 Inc.",
-     Tag = "#t-woff-1"
+     Content = "有字库，让中文跃上云端！",
+     Tag = "#id1"
 });
 param2.Tags.Add(new FontFaceParam
 {
      AccessKey = "xxx",
-     Content = "jamesbing-woff-2 Inc.",
-     Tag = "#t-woff-2"
+     Content = "有字库，让中文跃上云端！",
+     Tag = ".class1"
 });
 
 var response = await youzikuClient.GetBatchWoffFontFaceAsync(param2);
@@ -141,36 +141,40 @@ var response = await youzikuClient.GetBatchWoffFontFaceAsync(param2);
 #### 备注：自定义路径接口可以被程序异步调用，程序调用后可以直接向下执行，不需要等待返回值
 同步调用
 ``` csharp
+//构建一个请求参数
 var cusParam = new BatchCustomPathWoffFontFaceParam();
+//开始构建生成项
 cusParam.Datas.Add(new CustomPathFontFaceParam
 {
       AccessKey = "xxx",
-      Content = "jamesbingbing1 Inc.",
-      Url = "jamesbing/test-1"
+      Content = "有字库，让中文跃上云端！",
+      Url = "youziku/test-1"
 });
 cusParam.Datas.Add(new CustomPathFontFaceParam
 {
        AccessKey = "xxx",
-       Content = "jamesbingbing2 Inc.",
-       Url = "jamesbing/test-2"
+       Content = "有字库，让中文跃上云端！",
+       Url = "youziku/test-2"
 });
 
 var response =  youzikuClient.GetCustomPathBatchWoffWebFont(cusParam);
 ```
 异步调用
 ``` csharp
+//构建一个请求参数
 var cusParam = new BatchCustomPathWoffFontFaceParam();
+//开始构建生成项
 cusParam.Datas.Add(new CustomPathFontFaceParam
 {
       AccessKey = "xxx",
-      Content = "jamesbingbing1 Inc.",
-      Url = "jamesbing/test-1"
+      Content = "有字库，让中文跃上云端！",
+      Url = "youziku/test-1"
 });
 cusParam.Datas.Add(new CustomPathFontFaceParam
 {
        AccessKey = "xxx",
-       Content = "jamesbingbing2 Inc.",
-       Url = "jamesbing/test-2"
+       Content = "有字库，让中文跃上云端！",
+       Url = "youziku/test-2"
 });
 
 var response = await youzikuClient.GetCustomPathBatchWoffWebFontAsync(cusParam);
