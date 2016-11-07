@@ -30,8 +30,8 @@ namespace Sample
             var response = await youzikuClient.GetFontFaceAsync(new FontFaceParam
             {
                 AccessKey = "xxx",
-                Content = "jamesbing Inc.",
-                Tag = "#gg"
+                Content = "有字库，让中文跃上云端！",
+                Tag = "#id1"
             }
             );
 
@@ -39,8 +39,8 @@ namespace Sample
             var response2 = await youzikuClient.GetWoffBase64StringFontFaceAsync(new FontFaceParam
             {
                 AccessKey = "xxx",
-                Content = "jamesbingbing Inc.",
-                Tag = "#gg"
+                Content = "有字库，让中文跃上云端！",
+                Tag = "#id1"
             }
            );
 
@@ -50,14 +50,14 @@ namespace Sample
             param.Tags.Add(new FontFaceParam
             {
                 AccessKey = "xxx",
-                Content = "jamesbing1 Inc.",
-                Tag = "#t1"
+                Content = "有字库，让中文跃上云端！",
+                Tag = "#id1"
             });
             param.Tags.Add(new FontFaceParam
             {
                 AccessKey = "xxx",
-                Content = "jamesbing2 Inc.",
-                Tag = "#t2"
+                Content = "有字库，让中文跃上云端！",
+                Tag = ".class1"
             });
 
             var response3 = await youzikuClient.GetBatchFontFaceAsync(param);
@@ -67,14 +67,14 @@ namespace Sample
             param2.Tags.Add(new FontFaceParam
             {
                 AccessKey = "xxx",
-                Content = "jamesbing-woff-1 Inc.",
-                Tag = "#t-woff-1"
+                Content = "有字库，让中文跃上云端！",
+                Tag = "#id1"
             });
             param2.Tags.Add(new FontFaceParam
             {
                 AccessKey = "xxx",
-                Content = "jamesbing-woff-2 Inc.",
-                Tag = "#t-woff-2"
+                Content = "有字库，让中文跃上云端！",
+                Tag = ".class1"
             });
 
             var response4 = await youzikuClient.GetBatchWoffFontFaceAsync(param2);
@@ -84,14 +84,14 @@ namespace Sample
             cusParam.Datas.Add(new CustomPathFontFaceParam
             {
                 AccessKey = "xxx",
-                Content = "jamesbingbing1 Inc.",
-                Url = "jamesbing/test-1"
+                Content = "有字库，让中文跃上云端！",
+                Url = "youziku/test-1"
             });
             cusParam.Datas.Add(new CustomPathFontFaceParam
             {
                 AccessKey = "xxx",
-                Content = "jamesbingbing2 Inc.",
-                Url = "jamesbing/test-2"
+                Content = "有字库，让中文跃上云端！",
+                Url = "youziku/test-2"
             });
 
             var response5 = await youzikuClient.GetCustomPathBatchWoffWebFontAsync(cusParam);
