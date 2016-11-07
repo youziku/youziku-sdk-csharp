@@ -3,7 +3,7 @@
 
 # 二、介绍
 
-适用于在C#中调用service.youziku.com中的所有接口
+SDK适用于在C#语言中调用service.youziku.com中的所有api
 
 # 三、Sample
 ## 1.初始化客户端实例
