@@ -70,9 +70,9 @@ namespace Youziku.Client
         /// <summary>
         /// 构造一个YouzikuClient
         /// </summary>
-        /// <param name="host">host</param>
         /// <param name="apiKey">apiKey</param>
-        public YouzikuServiceClient(string host, string apiKey)
+        /// <param name="host">host</param>
+        public YouzikuServiceClient(string apiKey,string host= "http://service.youziku.com")
         {
             if (string.IsNullOrWhiteSpace(host)) throw new ArgumentException(nameof(YouzikuConfig) + " field host is null or Empty!");
             if (string.IsNullOrWhiteSpace(apiKey)) throw new ArgumentException(nameof(YouzikuConfig) + " field ApiKey is null or Empty!");
