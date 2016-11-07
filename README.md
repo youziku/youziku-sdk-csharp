@@ -141,7 +141,9 @@ var response = await youzikuClient.GetBatchWoffFontFaceAsync(param2);
 #### 备注：自定义路径接口可以被程序异步调用，程序调用后可以直接向下执行，不需要等待返回值
 同步调用
 ``` csharp
+//构建一个请求参数
 var cusParam = new BatchCustomPathWoffFontFaceParam();
+//开始构建生成项
 cusParam.Datas.Add(new CustomPathFontFaceParam
 {
       AccessKey = "xxx",
@@ -159,7 +161,9 @@ var response =  youzikuClient.GetCustomPathBatchWoffWebFont(cusParam);
 ```
 异步调用
 ``` csharp
+//构建一个请求参数
 var cusParam = new BatchCustomPathWoffFontFaceParam();
+//开始构建生成项
 cusParam.Datas.Add(new CustomPathFontFaceParam
 {
       AccessKey = "xxx",
