@@ -46,7 +46,9 @@ namespace Sample
 
 
             //3.GetBatchFontFace()接口
+            //构建一个请求参数
             var param = new BatchFontFaceParam();
+            //开始构建生成项
             param.Tags.Add(new FontFaceParam
             {
                 AccessKey = "xxx",
@@ -63,7 +65,9 @@ namespace Sample
             var response3 = await youzikuClient.GetBatchFontFaceAsync(param);
 
             //4.GetBatchWoffFontFace()接口
+            //构建一个请求参数
             var param2 = new BatchFontFaceParam();
+            //开始构建生成项
             param2.Tags.Add(new FontFaceParam
             {
                 AccessKey = "xxx",
@@ -80,7 +84,9 @@ namespace Sample
             var response4 = await youzikuClient.GetBatchWoffFontFaceAsync(param2);
 
             //5.批量自定义路径 CreateBatchWoffWebFontAsync接口 
+            //构建一个请求参数
             var cusParam = new BatchCustomPathWoffFontFaceParam();
+            //开始构建生成项
             cusParam.Datas.Add(new CustomPathFontFaceParam
             {
                 AccessKey = "xxx",
