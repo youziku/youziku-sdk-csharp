@@ -9,7 +9,7 @@
 ### 初始化客户端实例
      
   
-### //初始化方式1
+### 初始化方式1
 ```csharp
 static IYouzikuServiceClient youzikuClient = new YouzikuServiceClient(new YouzikuConfig()
 {
@@ -18,7 +18,7 @@ ApiKey = "xxxxxx"
 });
 
 ```
-### //初始化方式2
+### 初始化方式2
 ```csharp 
 static IYouzikuServiceClient youzikuClient = new YouzikuServiceClient(host: "http://service.youziku.com", apiKey: "xxxxxx");
 ```
