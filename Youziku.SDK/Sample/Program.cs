@@ -13,7 +13,7 @@ namespace Sample
     class Program
     {
         //初始化方式1
-        //static IYouzikuServiceClient youzikuClient = new YouzikuServiceClient(new YouzikuConfig()
+        //static readonly IYouzikuServiceClient youzikuClient = new YouzikuServiceClient(new YouzikuConfig()
         //{ 
         //    Host = "http://service.youziku.com",
         //    ApiKey = "xxx"
@@ -21,7 +21,7 @@ namespace Sample
 
 
         //初始化方式2
-        static IYouzikuServiceClient youzikuClient = new YouzikuServiceClient(apiKey: "xxx");
+        static readonly IYouzikuServiceClient youzikuClient = new YouzikuServiceClient(apiKey: "xxx");
 
 
         internal static async Task Test()
