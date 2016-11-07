@@ -7,26 +7,51 @@ namespace Youziku.Common
     /// </summary>
     public static class ServiceMethod
     {
+
+
         /// <summary>
-        /// 接口方法GetFontFace()
+        /// WebFont,单标签生成方法名
+        /// @author:jamesbing
         /// </summary>
-        public const string GetFontface = "/webFont/getFontFace";
+        public class WebFont
+        {
+            /// <summary>
+            /// 接口方法GetFontFace()
+            /// </summary>
+            public const string GetFontface = "/webFont/getFontFace";
+
+
+            /// <summary>
+            /// 接口方法GetWoffBase64StringFontFace()
+            /// </summary>
+            public const string GetWoffBase64StringFontFace = "/webFont/getWoffBase64StringFontFace";
+        }
+
 
 
         /// <summary>
-        /// 接口方法GetWoffBase64StringFontFace()
+        /// batchWebFont,多标签生成方法名
+        /// @author:jamesbing
         /// </summary>
-        public const string GetWoffBase64StringFontFace = "/webFont/getWoffBase64StringFontFace";
+        public class BatchWebFont
+        {
+            /// <summary>
+            /// 接口方法GetBatchFontFace()
+            /// </summary>
+            public const string GetBatchFontFace = "/batchWebFont/getBatchFontFace";
+
+
+            /// <summary>
+            /// 接口方法GetBatchWoffFontFace()
+            /// </summary>
+            public const string GetBatchWoffFontFace = "/batchWebFont/getBatchWoffFontFace";
+        }
+
 
 
         /// <summary>
-        /// 接口方法GetBatchFontFace()
-        /// </summary>
-        public const string GetBatchFontFace = "/batchWebFont/getBatchFontFace";
-
-
-        /// <summary>
-        /// 自定义路径接口
+        ///CustomPath 自定义路径接口
+        /// @author:jamesbing
         /// </summary>
         public class CustomPath
         {

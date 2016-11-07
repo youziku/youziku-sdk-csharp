@@ -76,6 +76,24 @@ namespace Youziku.Client
         Task<BatchFontFaceResult> GetBatchFontFaceAsync(BatchFontFaceParam param);
         #endregion
 
+        #region +GetBatchWoffFontFace 多标签生成式,可传递多个标签和内容一次生成多个@fontface
+        /// <summary>
+        /// 多标签生成模式,直接返回仅woff格式的@fontface
+        /// </summary>
+        /// <param name="param">请求参数</param>
+        /// <returns></returns>
+        BatchFontFaceResult GetBatchWoffFontFace(BatchFontFaceParam param);
+        #endregion
+
+        #region +GetBatchWoffFontFaceAsync 多标签生成式,可传递多个标签和内容一次生成多个@fontface [Async]
+        /// <summary>
+        /// 异步多标签生成模式,直接返回仅woff格式的@fontface [Async]
+        /// </summary>
+        /// <param name="param">请求参数</param>
+        /// <returns></returns>
+        Task<BatchFontFaceResult> GetBatchWoffFontFaceAsync(BatchFontFaceParam param);
+        #endregion
+
         #endregion
 
         #region GetCustomPathBatchWoffWebFont

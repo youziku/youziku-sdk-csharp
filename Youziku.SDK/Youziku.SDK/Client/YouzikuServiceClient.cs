@@ -92,7 +92,7 @@ namespace Youziku.Client
         public FontFaceResult GetFontFace(FontFaceParam param)
         {
             var paramDic = ParamBuilder.GetFontface(param, _config);
-            return CommonGetFontFace<FontFaceResult>(paramDic, _config.Host + ServiceMethod.GetFontface, _config);
+            return CommonGetFontFace<FontFaceResult>(paramDic, _config.Host + ServiceMethod.WebFont.GetFontface, _config);
         }
         #endregion
 
@@ -105,7 +105,7 @@ namespace Youziku.Client
         public Task<FontFaceResult> GetFontFaceAsync(FontFaceParam param)
         {
             var paramDic = ParamBuilder.GetFontface(param, _config);
-            return CommonGetFontFaceAsync<FontFaceResult>(paramDic, _config.Host + ServiceMethod.GetFontface, _config);
+            return CommonGetFontFaceAsync<FontFaceResult>(paramDic, _config.Host + ServiceMethod.WebFont.GetFontface, _config);
         }
 
         #endregion
@@ -123,7 +123,7 @@ namespace Youziku.Client
         public FontFaceResult GetWoffBase64StringFontFace(FontFaceParam param)
         {
             var paramDic = ParamBuilder.GetFontface(param, _config);
-            return CommonGetFontFace<FontFaceResult>(paramDic, _config.Host + ServiceMethod.GetWoffBase64StringFontFace, _config);
+            return CommonGetFontFace<FontFaceResult>(paramDic, _config.Host + ServiceMethod.WebFont.GetWoffBase64StringFontFace, _config);
         }
         #endregion
 
@@ -136,7 +136,7 @@ namespace Youziku.Client
         public Task<FontFaceResult> GetWoffBase64StringFontFaceAsync(FontFaceParam param)
         {
             var paramDic = ParamBuilder.GetFontface(param, _config);
-            return CommonGetFontFaceAsync<FontFaceResult>(paramDic, _config.Host + ServiceMethod.GetWoffBase64StringFontFace, _config);
+            return CommonGetFontFaceAsync<FontFaceResult>(paramDic, _config.Host + ServiceMethod.WebFont.GetWoffBase64StringFontFace, _config);
         }
 
         #endregion
@@ -154,7 +154,7 @@ namespace Youziku.Client
         public BatchFontFaceResult GetBatchFontFace(BatchFontFaceParam param)
         {
             var paramDic = ParamBuilder.GetBatchFontFace(param, _config);
-            return CommonGetFontFace<BatchFontFaceResult>(paramDic, _config.Host + ServiceMethod.GetBatchFontFace, _config);
+            return CommonGetFontFace<BatchFontFaceResult>(paramDic, _config.Host + ServiceMethod.BatchWebFont.GetBatchFontFace, _config);
         }
         #endregion
 
@@ -167,10 +167,38 @@ namespace Youziku.Client
         public Task<BatchFontFaceResult> GetBatchFontFaceAsync(BatchFontFaceParam param)
         {
             var paramDic = ParamBuilder.GetBatchFontFace(param, _config);
-            return CommonGetFontFaceAsync<BatchFontFaceResult>(paramDic, _config.Host + ServiceMethod.GetBatchFontFace, _config);
+            return CommonGetFontFaceAsync<BatchFontFaceResult>(paramDic, _config.Host + ServiceMethod.BatchWebFont.GetBatchFontFace, _config);
         }
 
 
+        #endregion
+
+        #region +GetBatchWoffFontFace 多标签生成式,可传递多个标签和内容一次生成多个@fontface
+
+        /// <summary>
+        /// 多标签生成模式,直接返回仅woff格式的@fontface
+        /// </summary>
+        /// <param name="param">请求参数</param>
+        /// <returns></returns>
+        public BatchFontFaceResult GetBatchWoffFontFace(BatchFontFaceParam param)
+        {
+            var paramDic = ParamBuilder.GetBatchFontFace(param, _config);
+            return CommonGetFontFace<BatchFontFaceResult>(paramDic, _config.Host + ServiceMethod.BatchWebFont.GetBatchWoffFontFace, _config);
+        }
+        #endregion
+
+        #region +GetBatchWoffFontFaceAsync 多标签生成式,可传递多个标签和内容一次生成多个@fontface [Async]
+
+        /// <summary>
+        /// 异步多标签生成模式,直接返回仅woff格式的@fontface [Async]
+        /// </summary>
+        /// <param name="param">请求参数</param>
+        /// <returns></returns>
+        public Task<BatchFontFaceResult> GetBatchWoffFontFaceAsync(BatchFontFaceParam param)
+        {
+            var paramDic = ParamBuilder.GetBatchFontFace(param, _config);
+            return CommonGetFontFaceAsync<BatchFontFaceResult>(paramDic, _config.Host + ServiceMethod.BatchWebFont.GetBatchWoffFontFace, _config);
+        }
         #endregion
 
         #endregion
