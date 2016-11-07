@@ -7,6 +7,7 @@
 
 #三、Sample
   ## 初始化客户端实例
+  
    ### //初始化方式1
    ```csharp
     static IYouzikuServiceClient youzikuClient = new YouzikuServiceClient(new YouzikuConfig(){Host = "http://service.youziku.com",ApiKey = "xxxxxx"});
