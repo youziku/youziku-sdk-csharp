@@ -21,7 +21,8 @@ public static IYouzikuServiceClient youzikuClient = new YouzikuServiceClient(new
 publci static IYouzikuServiceClient youzikuClient = new YouzikuServiceClient(host: "http://service.youziku.com", apiKey: "xxxxxx");
 ```
 ## 2.单标签模式
-### 2.1 GetFontface()接口 [直接返回所有格式的@fontface]
+### 2.1 GetFontface()接口
+#### 备注:直接返回所有格式的@fontface
 同步调用
 ``` csharp
 var response = youzikuClient.GetFontFace(new FontFaceParam
@@ -40,7 +41,8 @@ var response = await youzikuClient.GetFontFaceAsync(new FontFaceParam
       Tag = "#gg"
 });
 ```
-### 2.2 GetWoffBase64StringFontFace()接口 [直接返回流（woff流）的@fontface]
+### 2.2 GetWoffBase64StringFontFace()接口
+#### 备注：直接返回流（woff流）的@fontface
 ``` csharp
 var response = youzikuClient.GetWoffBase64StringFontFace(new FontFaceParam
 {
@@ -59,10 +61,13 @@ var response = await youzikuClient.GetWoffBase64StringFontFaceAsync(new FontFace
 });
 ```
 ## 3.多标签生成式
-### 1.GetBatchFontFace()接口 [直接返回所有格式的@fontface;可传递多个标签和内容一次生成多个@fontface]
+### 1.GetBatchFontFace()接口 
+#### 备注：直接返回所有格式的@fontface;可传递多个标签和内容一次生成多个@fontface
 同步调用
 ``` csharp
+//构建一个请求参数
 var param = new BatchFontFaceParam();
+//开始构建生成项
 param.Tags.Add(new FontFaceParam
 {
     AccessKey = "xxx",
@@ -80,7 +85,9 @@ var response =  youzikuClient.GetBatchFontFace(param);
 ```
 异步调用
 ``` csharp
+//构建一个请求参数
 var param = new BatchFontFaceParam();
+//开始构建生成项
 param.Tags.Add(new FontFaceParam
 {
     AccessKey = "xxx",
