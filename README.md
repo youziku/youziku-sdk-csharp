@@ -8,11 +8,7 @@
 #三、Sample
    初始化客户端实例
    //初始化方式1
-    static IYouzikuServiceClient youzikuClient = new YouzikuServiceClient(new YouzikuConfig()
-    {
-         Host = "http://service.youziku.com",
-         ApiKey = "xxxxxx"
-     });
+    static IYouzikuServiceClient youzikuClient = new YouzikuServiceClient(new YouzikuConfig(){Host = "http://service.youziku.com",ApiKey = "xxxxxx"});
 
 
     //初始化方式2
