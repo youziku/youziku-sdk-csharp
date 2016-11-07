@@ -8,7 +8,7 @@
 # 三、Sample
 ## 1.初始化客户端实例
 ### 初始化方式1
-```c#
+```c sharp
 public static IYouzikuServiceClient youzikuClient = new YouzikuServiceClient(new YouzikuConfig()
 {
    Host = "http://service.youziku.com",
