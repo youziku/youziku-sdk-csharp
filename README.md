@@ -7,18 +7,8 @@ SDK适用于在C#语言中调用service.youziku.com中的所有api
 
 # 三、Sample
 ## 1.初始化客户端实例
-### 初始化方式1
-```csharp
-public static IYouzikuServiceClient youzikuClient = new YouzikuServiceClient(new YouzikuConfig()
-{
-   Host = "http://service.youziku.com",
-   ApiKey = "xxxxxx"
-});
-
-```
-### 初始化方式2
 ```csharp 
-publci static IYouzikuServiceClient youzikuClient = new YouzikuServiceClient(host: "http://service.youziku.com", apiKey: "xxxxxx");
+publci static IYouzikuServiceClient youzikuClient = new YouzikuServiceClient(apiKey: "xxxxxx");
 ```
 ## 2.单标签模式
 ### 2.1 GetFontface()
