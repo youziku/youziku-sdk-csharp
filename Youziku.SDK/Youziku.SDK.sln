@@ -17,6 +17,12 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "v3.5", "v3.5", "{851FEC50-C
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Youziku.SDK.v35", "Youziku.SDK.v35\Youziku.SDK.v35.csproj", "{AEEF204C-112E-44EA-8E77-AA8F42612853}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "dll", "dll", "{889D8603-1AC1-4B6E-B14E-1A1632AF2F38}"
+	ProjectSection(SolutionItems) = preProject
+		Youziku.SDK.v35\bin\Release\Youziku.SDK.v35.zip = Youziku.SDK.v35\bin\Release\Youziku.SDK.v35.zip
+		Youziku.SDK\bin\Release\Youziku.SDK.v45.zip = Youziku.SDK\bin\Release\Youziku.SDK.v45.zip
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
