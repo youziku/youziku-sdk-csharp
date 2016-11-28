@@ -49,9 +49,9 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Youziku.SDK\Youziku.SDK.csproj">
+    <ProjectReference Include="..\Youziku.SDK\Youziku.SDK.V4.5.csproj">
       <Project>{63567dbc-9690-415e-be67-b8c6f9ac7315}</Project>
-      <Name>Youziku.SDK</Name>
+      <Name>Youziku.SDK.V4.5</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
