@@ -6,7 +6,7 @@ using System.Runtime.InteropServices;
 // 控制。更改这些特性值可修改
 // 与程序集关联的信息。
 [assembly: AssemblyTitle("有字库service接口SDK")]
-[assembly: AssemblyDescription("有字库service接口SDK")]
+[assembly: AssemblyDescription("Youziku.SDK Framework 版本：4.5")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("北京有字库")]
 [assembly: AssemblyProduct("Youziku.SDK")]
