@@ -10,7 +10,6 @@ SDK适用于在.NET语言中调用service.youziku.com中的所有api
 ## 1.添加引用（Youziku.SDK.dll）
 ## 2.引用命名空间
 ``` csharp
-using System.Text;
 using Youziku.Client;
 using Youziku.Param.Batch;
 using Youziku.Param;
