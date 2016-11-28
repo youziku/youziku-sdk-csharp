@@ -1,6 +1,6 @@
 # 一、下载
 1. <a href="https://github.com/youziku/youziku-sdk-csharp/raw/master/sdk/Youziku.SDK.v35.zip">SDK</a>(兼容.NET Framework version 3.5及以上所有版本；) <br />
-2. <a href="https://github.com/youziku/youziku-sdk-csharp/raw/master/sdk/Youziku.SDK.v45.zip">SDK</a>(兼容.NET Framework version 4.5及以上所有版本；支持异步调用) <br />
+2. <a href="https://github.com/youziku/youziku-sdk-csharp/raw/master/sdk/Youziku.SDK.v45.zip">SDK</a>(兼容.NET Framework version 4.5及以上所有版本；增加对异步调用[使用async和await]的支持) <br />
 # 二、介绍
 
 SDK适用于在.NET语言中调用service.youziku.com中的所有api
