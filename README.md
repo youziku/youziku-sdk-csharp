@@ -1,16 +1,14 @@
 # 一、下载
-1. <a href="https://github.com/youziku/youziku-sdk-csharp/raw/master/sdk/Youziku.SDK.v45.zip">SDK(支持.NET Framework version为4.5及以上版本调用；支持异步调用) <br />
-2. <a href="https://github.com/youziku/youziku-sdk-csharp/raw/master/sdk/Youziku.SDK.v35.zip">SDK(支持.NET Framework version为3.5及以上版本调用；只支持异步用)
-<br />
-
+1. <a href="https://github.com/youziku/youziku-sdk-csharp/raw/master/sdk/Youziku.SDK.v35.zip">SDK</a>(兼容.NET Framework version 3.5及以上所有版本；) <br />
+2. <a href="https://github.com/youziku/youziku-sdk-csharp/raw/master/sdk/Youziku.SDK.v45.zip">SDK</a>(兼容.NET Framework version 4.5及以上所有版本；支持异步调用) <br />
 # 二、介绍
 
-SDK适用于在C#语言中调用service.youziku.com中的所有api
+SDK适用于在.NET语言中调用service.youziku.com中的所有api
 
 # 三、Sample
 ## 1.初始化YouzikuServiceClient实例,在全局配置一遍即可
 ```csharp 
-public static readonly IYouzikuServiceClient youzikuClient = new YouzikuServiceClient(apiKey: "xxxxxx");
+public static readonly IYouzikuServiceClient youzikuClient = new YouzikuServiceClient("xxxxxx");//apiKey
 ```
 ## 2.单标签模式
 ### 2.1 GetFontface()
@@ -71,7 +69,7 @@ param.Tags.Add(new FontFaceParam
 param.Tags.Add(new FontFaceParam
 {
     AccessKey = "xxx",
-    Content = "有字库，让中文跃上云端！",
+    Content = "有字库，让前端掌控字体！",
     Tag = ".class1"
 });
 var response =  youzikuClient.GetBatchFontFace(param);
@@ -91,7 +89,7 @@ param.Tags.Add(new FontFaceParam
 param.Tags.Add(new FontFaceParam
 {
     AccessKey = "xxx",
-    Content = "有字库，让中文跃上云端！",
+    Content = "有字库，让前端掌控字体！",
     Tag = ".class1"
 });
 var response = await youzikuClient.GetBatchFontFaceAsync(param);
@@ -112,7 +110,7 @@ param2.Tags.Add(new FontFaceParam
 param2.Tags.Add(new FontFaceParam
 {
      AccessKey = "xxx",
-     Content = "有字库，让中文跃上云端！",
+     Content = "有字库，让前端掌控字体！",
      Tag = ".class1"
 });
 
@@ -132,7 +130,7 @@ param2.Tags.Add(new FontFaceParam
 param2.Tags.Add(new FontFaceParam
 {
      AccessKey = "xxx",
-     Content = "有字库，让中文跃上云端！",
+     Content = "有字库，让前端掌控字体！",
      Tag = ".class1"
 });
 
@@ -155,29 +153,9 @@ cusParam.Datas.Add(new CustomPathFontFaceParam
 cusParam.Datas.Add(new CustomPathFontFaceParam
 {
        AccessKey = "xxx",
-       Content = "有字库，让中文跃上云端！",
+       Content = "有字库，让前端掌控字体！",
        Url = "youziku/test-2"
 });
 
 var response =  youzikuClient.GetCustomPathBatchWoffWebFont(cusParam);
-```
-异步调用
-``` csharp
-//构建一个请求参数
-var cusParam = new BatchCustomPathWoffFontFaceParam();
-//开始构建生成项
-cusParam.Datas.Add(new CustomPathFontFaceParam
-{
-      AccessKey = "xxx",
-      Content = "有字库，让中文跃上云端！",
-      Url = "youziku/test-1"
-});
-cusParam.Datas.Add(new CustomPathFontFaceParam
-{
-       AccessKey = "xxx",
-       Content = "有字库，让中文跃上云端！",
-       Url = "youziku/test-2"
-});
-
-var response = await youzikuClient.GetCustomPathBatchWoffWebFontAsync(cusParam);
 ```
