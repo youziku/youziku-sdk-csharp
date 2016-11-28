@@ -1,5 +1,5 @@
 # 一、下载
-1. <a href="https://github.com/youziku/youziku-sdk-csharp/raw/master/dll/Youziku.SDK.zip">.NET Framework version：4.5</a>版本SDK <br />
+1. <a href="https://github.com/youziku/youziku-sdk-csharp/raw/master/dll/Youziku.SDK.v45.zip">.NET Framework version：4.5 </a> 版本SDK <br />
 2. <a href="https://github.com/youziku/youziku-sdk-csharp/raw/master/dll/Youziku.SDK.v35.zip">.NET Framework version：3.5+</a>版本SDK<br />
 
 # 二、介绍
