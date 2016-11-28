@@ -7,8 +7,8 @@
     <ProjectGuid>{AEEF204C-112E-44EA-8E77-AA8F42612853}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Youziku.SDK.V35</RootNamespace>
-    <AssemblyName>Youziku.SDK.V35</AssemblyName>
+    <RootNamespace>Youziku.SDK.v35</RootNamespace>
+    <AssemblyName>Youziku.SDK.v35</AssemblyName>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
