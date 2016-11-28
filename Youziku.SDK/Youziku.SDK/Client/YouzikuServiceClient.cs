@@ -23,6 +23,7 @@ namespace Youziku.Client
         private YouzikuConfig _config;
         #endregion
 
+        #region 初始化请求类库实例
         /// <summary>
         /// 初始化请求类库实例
         /// </summary>
@@ -41,7 +42,8 @@ namespace Youziku.Client
                     HttpRequestClient = new TWebRequest();
                     break;
             }
-        }
+        } 
+        #endregion
 
         #region 构造一个YouzikuClient
         /// <summary>
