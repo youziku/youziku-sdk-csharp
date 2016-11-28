@@ -1,6 +1,6 @@
 # 一、下载
-1. <a href="https://github.com/youziku/youziku-sdk-csharp/raw/master/dll/Youziku.SDK.v45.zip">SDK(支持.NET Framework version为4.5及以上版本调用；支持异步调用) <br />
-2. <a href="https://github.com/youziku/youziku-sdk-csharp/raw/master/dll/Youziku.SDK.v35.zip">SDK(支持.NET Framework version为3.5及以上版本调用；只支持异步用)
+1. <a href="https://github.com/youziku/youziku-sdk-csharp/raw/master/sdk/Youziku.SDK.v45.zip">SDK(支持.NET Framework version为4.5及以上版本调用；支持异步调用) <br />
+2. <a href="https://github.com/youziku/youziku-sdk-csharp/raw/master/sdk/Youziku.SDK.v35.zip">SDK(支持.NET Framework version为3.5及以上版本调用；只支持异步用)
 <br />
 
 # 二、介绍
