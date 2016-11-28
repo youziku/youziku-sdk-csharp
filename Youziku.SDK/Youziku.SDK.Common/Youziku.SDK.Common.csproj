@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{AEEF204C-112E-44EA-8E77-AA8F42612853}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Youziku.SDK.Common</RootNamespace>
+    <AssemblyName>Youziku.SDK.Common</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Builder\ParamBuilder.cs" />
+    <Compile Include="Client\BaseServiceClient.cs" />
+    <Compile Include="Client\IYouzikuServiceClient.cs" />
+    <Compile Include="Client\YouzikuServiceClient.cs" />
+    <Compile Include="Common\RequestBaseParam.cs" />
+    <Compile Include="Common\ServiceMethod.cs" />
+    <Compile Include="Config\YouzikuConfig.cs" />
+    <Compile Include="Core\HttpRequestClient.cs" />
+    <Compile Include="Core\THttpMethod.cs" />
+    <Compile Include="Core\TWebRequest.cs" />
+    <Compile Include="Params\Batch\BatchCustomPathWoffFontFaceParam.cs" />
+    <Compile Include="Params\Batch\BatchFontFaceParam.cs" />
+    <Compile Include="Params\CustomPathFontFaceParam.cs" />
+    <Compile Include="Params\FontFaceParam.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Result\BatchCustomPathWoffFontFaceResult.cs" />
+    <Compile Include="Result\BatchFontFaceResult.cs" />
+    <Compile Include="Result\FontFaceResult.cs" />
+    <Compile Include="Result\ResponseItemResult.cs" />
+    <Compile Include="Result\ResponseStateResult.cs" />
+    <Compile Include="Validate\ParamValidate.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
