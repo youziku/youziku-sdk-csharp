@@ -9,7 +9,7 @@ namespace Youziku.Validate
 {
     public static class ParamValidate
     {
-        #region  + static GetFontface
+        #region  + static GetFontface 
         /// <summary>
         /// 验证GetFontface接口
         /// </summary>
