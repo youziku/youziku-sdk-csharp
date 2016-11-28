@@ -1,14 +1,17 @@
 ﻿using System;
 using System.Collections.Generic;
-
 using System.Threading.Tasks;
-using Newtonsoft.Json;
+using System.Web.Script.Serialization;
 using Youziku.Core;
 using Youziku.Settings;
 
 
 namespace Youziku.Client
 {
+    /// <summary>
+    /// 基础服务客户端
+    /// @author:jamesbing
+    /// </summary>
     public class BaseServiceClient
     {
 
@@ -35,7 +38,7 @@ namespace Youziku.Client
                 }
                 var jsonResult = HttpRequestClient.Request(url, THttpMethod.Post, paramDic, config.TimeOut);
                 if (string.IsNullOrWhiteSpace(jsonResult)) throw new ArgumentException("接口响应null或Empty!");
-                return JsonConvert.DeserializeObject<TResult>(jsonResult);
+                return new JavaScriptSerializer().Deserialize<TResult>(jsonResult);
             }
             catch (Exception ex)
             {
@@ -59,7 +62,7 @@ namespace Youziku.Client
             {
                 var jsonResult = await HttpRequestClient.RequestAsync(url, THttpMethod.Post, paramDic, config.TimeOut);
                 if (string.IsNullOrWhiteSpace(jsonResult)) throw new ArgumentException("接口响应null或Empty!");
-                return JsonConvert.DeserializeObject<TResult>(jsonResult);
+                return new JavaScriptSerializer().Deserialize<TResult>(jsonResult);
             }
             catch (Exception ex)
             {
