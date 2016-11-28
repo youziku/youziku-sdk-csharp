@@ -15,7 +15,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "v4.5", "v4.5", "{F97F8831-4
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "v3.5", "v3.5", "{851FEC50-CE21-4FDE-84CB-6C4020D96A47}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Youziku.SDK.v35", "Youziku.SDK.Common\Youziku.SDK.v35.csproj", "{AEEF204C-112E-44EA-8E77-AA8F42612853}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Youziku.SDK.v35", "Youziku.SDK.v35\Youziku.SDK.v35.csproj", "{AEEF204C-112E-44EA-8E77-AA8F42612853}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
