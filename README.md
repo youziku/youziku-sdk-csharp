@@ -1,6 +1,6 @@
 # 一、下载
-1. .NET Framework version：4.5 <br />
- （<a href="">另有支持.NET Framework2.0-4.5的SDK</a>）<br />
+1. <a href="">.NET Framework version：4.5</a> <br />
+2. <a href="">.NET Framework version：3.5+</a><br />
 
 # 二、介绍
 
