@@ -6,7 +6,17 @@
 
 SDK适用于在.NET语言中调用service.youziku.com中的所有api
 
-# 三、Sample
+# 三、引用
+## 1.添加引用（Youziku.SDK.dll）
+## 2.引用命名空间
+``` csharp
+using System.Text;
+using Youziku.Client;
+using Youziku.Param.Batch;
+using Youziku.Param;
+```
+
+# 四、Sample
 ## 1.初始化YouzikuServiceClient实例,在全局配置一遍即可
 ```csharp 
 public static readonly IYouzikuServiceClient youzikuClient = new YouzikuServiceClient("xxxxxx");//apiKey
