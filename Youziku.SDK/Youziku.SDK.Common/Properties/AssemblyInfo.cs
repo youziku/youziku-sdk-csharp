@@ -6,9 +6,9 @@ using System.Runtime.InteropServices;
 // 控制。更改这些特性值可修改
 // 与程序集关联的信息。
 [assembly: AssemblyTitle("Youziku.SDK.Common")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyDescription("Youziku.SDK.2.0")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
+[assembly: AssemblyCompany("Beijing Youziku Inc.")]
 [assembly: AssemblyProduct("Youziku.SDK.Common")]
 [assembly: AssemblyCopyright("Copyright ©  2016")]
 [assembly: AssemblyTrademark("")]
