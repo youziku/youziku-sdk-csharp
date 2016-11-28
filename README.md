@@ -1,6 +1,6 @@
-# 一、环境
-1..NET Framework version：4.5 <br />
-2.依赖项：Newtonsoft.Json,version="9.0.1"
+# 一、下载
+1. .NET Framework version：4.5 <br />
+ （<a href="">另有支持.NET Framework2.0-4.5的SDK</a>）
 # 二、介绍
 
 SDK适用于在C#语言中调用service.youziku.com中的所有api
