@@ -4,7 +4,7 @@
 
 # 二、介绍
 
-SDK适用于在.NET语言中调用service.youziku.com中的所有api
+SDK适用于在C#(或其他.NET框架下语言)中调用service.youziku.com中的所有api
 
 # 三、引用
 ## 1.添加引用（Youziku.SDK.dll）
@@ -168,4 +168,24 @@ cusParam.Datas.Add(new CustomPathFontFaceParam
 });
 
 var response =  youzikuClient.GetCustomPathBatchWoffWebFont(cusParam);
+```
+异步调用
+``` csharp
+//构建一个请求参数
+var cusParam = new BatchCustomPathWoffFontFaceParam();
+//开始构建生成项
+cusParam.Datas.Add(new CustomPathFontFaceParam
+{
+      AccessKey = "xxx",
+      Content = "有字库，让中文跃上云端！",
+      Url = "youziku/test-1"
+});
+cusParam.Datas.Add(new CustomPathFontFaceParam
+{
+       AccessKey = "xxx",
+       Content = "有字库，让前端掌控字体！",
+       Url = "youziku/test-2"
+});
+
+var response = await youzikuClient.GetCustomPathBatchWoffWebFont(cusParam);
 ```
