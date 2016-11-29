@@ -1,8 +1,4 @@
-# 一、下载
-1. <a href="https://github.com/youziku/youziku-sdk-csharp/raw/master/sdk/Youziku.SDK.v35.zip">SDK</a>(兼容.NET Framework version 3.5及以上所有版本；) <br />
-2. <a href="https://github.com/youziku/youziku-sdk-csharp/raw/master/sdk/Youziku.SDK.v45.zip">SDK</a>(兼容.NET Framework version 4.5及以上所有版本；增加对异步调用[使用async和await]的支持)
-
-# 二、介绍
+# 一、介绍
 
 ## 1．SDK适用语言<br/>
 SDK适用于在C#(或其他.NET框架下语言)中调用<a  target="_blank"  href="http://service.youziku.com">service.youziku.com</a>中的所有api<br/>
@@ -21,6 +17,9 @@ SDK的返回值主要内容是@font-face语句，@font-face语句是CSS3中的�
 用户可以将@font-face语句与内容相对应保存至数据库，以便在内容被加载时，该语句能跟随内容一起加载到前端页面，从而使内容显示字体效果；<br/>
 用户也可以不保存@font-face语句：有字库允许用户自定义字体存放路径，当需要显示字体效果时，可以根据自己所定义的路径拼出@font-face语句，然后将语句输出到前端页面，即可使内容显示字体效果。
 
+# 二、下载
+1. <a href="https://github.com/youziku/youziku-sdk-csharp/raw/master/sdk/Youziku.SDK.v35.zip">SDK</a>(兼容.NET Framework version 3.5及以上所有版本；) <br />
+2. <a href="https://github.com/youziku/youziku-sdk-csharp/raw/master/sdk/Youziku.SDK.v45.zip">SDK</a>(兼容.NET Framework version 4.5及以上所有版本；增加对异步调用[使用async和await]的支持)
 
 # 三、引用
 ## 1.添加引用（Youziku.SDK.dll）
