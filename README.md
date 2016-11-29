@@ -5,7 +5,7 @@
 # 二、介绍
 
 ## 1．SDK适用语言<br/>
-SDK适用于在C#(或其他.NET框架下语言)中调用service.youziku.com中的所有api<br/>
+SDK适用于在C#(或其他.NET框架下语言)中调用<a  target="_blank"  href="http://service.youziku.com">service.youziku.com</a>中的所有api<br/>
 
 ## 2.工作流程<br/>
 　　①用户用后台程序调用SDK，提交动态内容到有字库的子集化(裁切)服务器<br/>
