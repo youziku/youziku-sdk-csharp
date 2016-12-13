@@ -30,7 +30,7 @@ namespace Youziku.Builder
                 {
                     {"ApiKey", config.ApiKey},
                     {"AccessKey", param.AccessKey},
-                    {"Content", param.Content},
+                    {"Content", param.Content.Replace("&",string.Empty)},
                     {"Tag", param.Tag}
                 };
             return paramDic;
@@ -57,7 +57,7 @@ namespace Youziku.Builder
             {
                 paramDic.Add($"Tags[{i}][AccessKey]", param.Tags[i].AccessKey);
                 paramDic.Add($"Tags[{i}][Tag]", param.Tags[i].Tag);
-                paramDic.Add($"Tags[{i}][Content]", param.Tags[i].Content);
+                paramDic.Add($"Tags[{i}][Content]", param.Tags[i].Content.Replace("&", string.Empty));
             }
 
             return paramDic;
@@ -84,7 +84,7 @@ namespace Youziku.Builder
             {
                 paramDic.Add($"Datas[{i}][AccessKey]", param.Datas[i].AccessKey);
                 paramDic.Add($"Datas[{i}][Url]", param.Datas[i].Url);
-                paramDic.Add($"Datas[{i}][Content]", param.Datas[i].Content);
+                paramDic.Add($"Datas[{i}][Content]", param.Datas[i].Content.Replace("&", string.Empty));
             }
 
             return paramDic;
