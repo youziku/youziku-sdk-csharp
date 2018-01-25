@@ -35,8 +35,53 @@ using Youziku.Param;
 ```csharp 
 public static readonly IYouzikuServiceClient youzikuClient = new YouzikuServiceClient("xxxxxx");//apiKey
 ```
-## 2.单标签模式
-### 2.1 GetFontface()
+
+## 2.调用接口
+### 2.1.敏捷模式-多标签woff接口 CreateBatchWoffWebFontAsync()
+#### 备注：敏捷模式接口可以被程序异步调用，程序调用后可以直接向下执行，不需要等待返回值
+#### &emsp;&emsp;&emsp;当需要显示字体效果时，可以根据自己所定义的路径<a href="http://service.youziku.com/index.html#format" target="_blank" style="color: #ff7e00;">拼组出@font-face语句</a>，然后将语句输出到前端页面，即可使内容显示字体效果。
+同步调用
+``` csharp
+//构建一个请求参数
+var cusParam = new BatchCustomPathWoffFontFaceParam();
+//开始构建生成项
+cusParam.Datas.Add(new CustomPathFontFaceParam
+{
+      AccessKey = "xxx",
+      Content = "有字库，让中文跃上云端！",
+      Url = "youziku/test-1"
+});
+cusParam.Datas.Add(new CustomPathFontFaceParam
+{
+       AccessKey = "xxx",
+       Content = "有字库，让前端掌控字体！",
+       Url = "youziku/test-2"
+});
+
+var response =  youzikuClient.GetCustomPathBatchWoffWebFont(cusParam);
+```
+异步调用
+``` csharp
+//构建一个请求参数
+var cusParam = new BatchCustomPathWoffFontFaceParam();
+//开始构建生成项
+cusParam.Datas.Add(new CustomPathFontFaceParam
+{
+      AccessKey = "xxx",
+      Content = "有字库，让中文跃上云端！",
+      Url = "youziku/test-1"
+});
+cusParam.Datas.Add(new CustomPathFontFaceParam
+{
+       AccessKey = "xxx",
+       Content = "有字库，让前端掌控字体！",
+       Url = "youziku/test-2"
+});
+
+var response = await youzikuClient.GetCustomPathBatchWoffWebFont(cusParam);
+```
+
+### 2.2 语句绑定模式-单标签接口 GetFontface()
 #### 备注:直接返回所有格式的@fontface
 同步调用
 ``` csharp
@@ -56,8 +101,8 @@ var response = await youzikuClient.GetFontFaceAsync(new FontFaceParam
       Tag = "#id1"
 });
 ```
-### 2.2 GetWoffBase64StringFontFace()
-#### 备注：直接返回流（woff流）的@fontface
+### 2.3 语句绑定模式-单标签Base64接口 GetWoffBase64StringFontFace()
+#### 备注：直接返回Base64流（woff流）的@fontface
 同步调用
 ``` csharp
 var response = youzikuClient.GetWoffBase64StringFontFace(new FontFaceParam
@@ -76,8 +121,8 @@ var response = await youzikuClient.GetWoffBase64StringFontFaceAsync(new FontFace
       Tag = "#id1"
 });
 ```
-## 3.多标签生成模式
-### 1.GetBatchFontFace()
+
+### 2.4 语句绑定模式-多标签接口 GetBatchFontFace()
 #### 备注：直接返回所有格式的@fontface;可传递多个标签和内容一次生成多个@fontface
 同步调用
 ``` csharp
@@ -119,7 +164,7 @@ param.Tags.Add(new FontFaceParam
 });
 var response = await youzikuClient.GetBatchFontFaceAsync(param);
 ```
-### 2.GetBatchWoffFontFace ()
+### 2.5 语句绑定模式-多标签woff格式接口 GetBatchWoffFontFace ()
 #### 备注：直接返回仅woff格式的@fontface
 同步调用
 ``` csharp
@@ -160,48 +205,4 @@ param2.Tags.Add(new FontFaceParam
 });
 
 var response = await youzikuClient.GetBatchWoffFontFaceAsync(param2);
-```
-## 4.自定义路径生成模式
-### 1.CreateBatchWoffWebFontAsync()
-#### 备注：自定义路径接口可以被程序异步调用，程序调用后可以直接向下执行，不需要等待返回值
-#### &emsp;&emsp;&emsp;当需要显示字体效果时，可以根据自己所定义的路径<a href="http://service.youziku.com/index.html#format" target="_blank" style="color: #ff7e00;">拼组出@font-face语句</a>，然后将语句输出到前端页面，即可使内容显示字体效果。
-同步调用
-``` csharp
-//构建一个请求参数
-var cusParam = new BatchCustomPathWoffFontFaceParam();
-//开始构建生成项
-cusParam.Datas.Add(new CustomPathFontFaceParam
-{
-      AccessKey = "xxx",
-      Content = "有字库，让中文跃上云端！",
-      Url = "youziku/test-1"
-});
-cusParam.Datas.Add(new CustomPathFontFaceParam
-{
-       AccessKey = "xxx",
-       Content = "有字库，让前端掌控字体！",
-       Url = "youziku/test-2"
-});
-
-var response =  youzikuClient.GetCustomPathBatchWoffWebFont(cusParam);
-```
-异步调用
-``` csharp
-//构建一个请求参数
-var cusParam = new BatchCustomPathWoffFontFaceParam();
-//开始构建生成项
-cusParam.Datas.Add(new CustomPathFontFaceParam
-{
-      AccessKey = "xxx",
-      Content = "有字库，让中文跃上云端！",
-      Url = "youziku/test-1"
-});
-cusParam.Datas.Add(new CustomPathFontFaceParam
-{
-       AccessKey = "xxx",
-       Content = "有字库，让前端掌控字体！",
-       Url = "youziku/test-2"
-});
-
-var response = await youzikuClient.GetCustomPathBatchWoffWebFont(cusParam);
 ```
