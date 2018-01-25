@@ -36,8 +36,8 @@ using Youziku.Param;
 public static readonly IYouzikuServiceClient youzikuClient = new YouzikuServiceClient("xxxxxx");//apiKey
 ```
 
-## 2.调用接口
-### 2.1.敏捷模式-多标签woff接口 CreateBatchWoffWebFontAsync()
+## 2.调用接口(接口分为5种模式，用户可任选一种)
+### 2.1.敏捷模式-多标签woff接口：CreateBatchWoffWebFontAsync()
 #### 备注：敏捷模式接口可以被程序异步调用，程序调用后可以直接向下执行，不需要等待返回值
 #### &emsp;&emsp;&emsp;当需要显示字体效果时，可以根据自己所定义的路径<a href="http://service.youziku.com/index.html#format" target="_blank" style="color: #ff7e00;">拼组出@font-face语句</a>，然后将语句输出到前端页面，即可使内容显示字体效果。
 同步调用
@@ -81,7 +81,7 @@ cusParam.Datas.Add(new CustomPathFontFaceParam
 var response = await youzikuClient.GetCustomPathBatchWoffWebFont(cusParam);
 ```
 
-### 2.2 语句绑定模式-单标签接口 GetFontface()
+### 2.2 语句绑定模式-单标签接口：GetFontface()
 #### 备注:直接返回所有格式的@fontface
 同步调用
 ``` csharp
@@ -101,7 +101,7 @@ var response = await youzikuClient.GetFontFaceAsync(new FontFaceParam
       Tag = "#id1"
 });
 ```
-### 2.3 语句绑定模式-单标签Base64接口 GetWoffBase64StringFontFace()
+### 2.3 语句绑定模式-单标签Base64接口：GetWoffBase64StringFontFace()
 #### 备注：直接返回Base64流（woff流）的@fontface
 同步调用
 ``` csharp
@@ -122,7 +122,7 @@ var response = await youzikuClient.GetWoffBase64StringFontFaceAsync(new FontFace
 });
 ```
 
-### 2.4 语句绑定模式-多标签接口 GetBatchFontFace()
+### 2.4 语句绑定模式-多标签接口：GetBatchFontFace()
 #### 备注：直接返回所有格式的@fontface;可传递多个标签和内容一次生成多个@fontface
 同步调用
 ``` csharp
@@ -164,7 +164,7 @@ param.Tags.Add(new FontFaceParam
 });
 var response = await youzikuClient.GetBatchFontFaceAsync(param);
 ```
-### 2.5 语句绑定模式-多标签woff格式接口 GetBatchWoffFontFace ()
+### 2.5 语句绑定模式-多标签woff格式接口：GetBatchWoffFontFace ()
 #### 备注：直接返回仅woff格式的@fontface
 同步调用
 ``` csharp
