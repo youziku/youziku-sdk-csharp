@@ -18,5 +18,7 @@ namespace Youziku.Param
         /// 系统规定参数，从有字库字体使用页中"卢教"模式中获取，$youziku.load 语句中第2个参数即为AccessKey。
         /// </summary>
         public string AccessKey { get; set; }
+
+        
     }
 }

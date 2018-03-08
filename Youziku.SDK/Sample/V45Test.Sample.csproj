@@ -7,8 +7,8 @@
     <ProjectGuid>{DF7D7146-1644-4501-B116-A4F4E90EE058}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Sample</RootNamespace>
-    <AssemblyName>Sample</AssemblyName>
+    <RootNamespace>V45Test.Sample</RootNamespace>
+    <AssemblyName>V45Test.Sample</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -42,6 +42,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="..\V35Test.Sample\IInterfaceTest.cs">
+      <Link>IInterfaceTest.cs</Link>
+    </Compile>
+    <Compile Include="..\V35Test.Sample\Impl\Batch\BatchTestImpl.cs">
+      <Link>Impl\Batch\BatchTestImpl.cs</Link>
+    </Compile>
+    <Compile Include="..\V35Test.Sample\Impl\CustomPath\CustomPathTestImpl.cs">
+      <Link>Impl\CustomPath\CustomPathTestImpl.cs</Link>
+    </Compile>
+    <Compile Include="..\V35Test.Sample\Impl\Single\SingleTestImpl.cs">
+      <Link>Impl\Single\SingleTestImpl.cs</Link>
+    </Compile>
+    <Compile Include="BaseTestImpl.cs" />
+    <Compile Include="IInterfaceTestAsync.cs" />
+    <Compile Include="Impl\Batch\BatchTestImplAsync.cs" />
+    <Compile Include="Impl\CustomPath\CustomPathTestImplAsync.cs" />
+    <Compile Include="Impl\Single\SingleTestImplAsync.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -54,6 +71,7 @@
       <Name>Youziku.SDK.v45</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

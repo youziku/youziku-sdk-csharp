@@ -39,6 +39,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="IInterfaceTest.cs" />
+    <Compile Include="Impl\BaseTestImpl.cs" />
+    <Compile Include="Impl\Batch\BatchTestImpl.cs" />
+    <Compile Include="Impl\CustomPath\CustomPathTestImpl.cs" />
+    <Compile Include="Impl\Single\SingleTestImpl.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -48,5 +53,6 @@
       <Name>Youziku.SDK.v35</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

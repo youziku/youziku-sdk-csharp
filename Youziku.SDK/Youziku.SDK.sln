@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26730.16
+VisualStudioVersion = 15.0.27130.2003
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Youziku.SDK.v45", "Youziku.SDK\Youziku.SDK.v45.csproj", "{63567DBC-9690-415E-BE67-B8C6F9AC7315}"
 EndProject
@@ -9,7 +9,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{4F28004D-E6F
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{B4740C89-06AF-43C3-9401-22BCD7BE22CA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sample", "Sample\Sample.csproj", "{DF7D7146-1644-4501-B116-A4F4E90EE058}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "V45Test.Sample", "Sample\V45Test.Sample.csproj", "{DF7D7146-1644-4501-B116-A4F4E90EE058}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "v4.5", "v4.5", "{F97F8831-4902-452D-A3F0-2310642298C5}"
 EndProject

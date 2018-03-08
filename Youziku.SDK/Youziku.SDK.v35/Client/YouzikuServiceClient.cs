@@ -63,7 +63,7 @@ namespace Youziku.Client
         }
         #endregion
 
-        #region GetFontFace
+        #region Single
 
         #region +GetFontFace 请求GetFontFace接口
         /// <summary>
@@ -76,8 +76,6 @@ namespace Youziku.Client
             var paramDic = ParamBuilder.GetFontface(param, _config);
             return CommonGetFontFace<FontFaceResult>(paramDic, _config.Host + ServiceMethod.WebFont.GetFontface, _config);
         }
-        #endregion
-
         #endregion
 
         #region GetWoffBase64StringFontFace
@@ -97,7 +95,9 @@ namespace Youziku.Client
 
         #endregion
 
-        #region GetBatchFontFace
+        #endregion
+
+        #region Batch
 
         #region +GetBatchFontFace 多标签生成式,可传递多个标签和内容一次生成多个@fontface
         /// <summary>
@@ -128,7 +128,7 @@ namespace Youziku.Client
 
         #endregion
 
-        #region GetCustomPathBatchWoffWebFont
+        #region CustomPath
 
         #region +GetCustomPathBatchWoffWebFont 请求 自定义路径接口；该接口底层实现为异步
         /// <summary>
@@ -136,14 +136,28 @@ namespace Youziku.Client
         /// </summary>
         /// <param name="param">请求参数</param>
         /// <returns></returns>
-        public BatchCustomPathWoffFontFaceResult GetCustomPathBatchWoffWebFont(BatchCustomPathWoffFontFaceParam param)
+        public BatchCustomPathFontFaceResult GetCustomPathBatchWoffWebFont(BatchCustomPathWoffFontFaceParam param)
         {
-            var paramDic = ParamBuilder.GetCustomPathBatchWoffWebFont(param, _config);
-            return CommonGetFontFace<BatchCustomPathWoffFontFaceResult>(paramDic, _config.Host + ServiceMethod.CustomPath.CreateBatchWoffWebFont, _config);
+            var paramDic = ParamBuilder.GetCustomPathFontFace(param, _config);
+            return CommonGetFontFace<BatchCustomPathFontFaceResult>(paramDic, _config.Host + ServiceMethod.CustomPath.CreateBatchWoffWebFont, _config);
         }
 
         #endregion
 
+        #region +GetCustomPathBatchWebFont 请求 自定义路径接口；该接口底层实现为异步
+
+        /// <summary>
+        ///请求 自定义路径接口；该接口底层实现为异步
+        /// </summary>
+        /// <param name="param">请求参数</param>
+        /// <returns></returns>
+        public BatchCustomPathFontFaceResult GetCustomPathBatchWebFont(BatchCustomPathWoffFontFaceParam param)
+        {
+            var paramDic = ParamBuilder.GetCustomPathFontFace(param, _config);
+            return CommonGetFontFace<BatchCustomPathFontFaceResult>(paramDic, _config.Host + ServiceMethod.CustomPath.CreateBatchWebFont, _config);
+        }
+
+        #endregion
 
         #endregion
     }

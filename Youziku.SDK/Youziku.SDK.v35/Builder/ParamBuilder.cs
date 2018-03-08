@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 
 using Youziku.Param;
 using Youziku.Param.Batch;
@@ -29,7 +28,8 @@ namespace Youziku.Builder
                     {"ApiKey", config.ApiKey},
                     {"AccessKey", param.AccessKey},
                     {"Content", param.Content.Replace("&",string.Empty)},
-                    {"Tag", param.Tag}
+                    {"Tag", param.Tag},
+                    {"UseRanFontFamily", param.UseRanFontFamily.ToString()}
                 };
             return paramDic;
         }
@@ -56,20 +56,21 @@ namespace Youziku.Builder
                 paramDic.Add($"Tags[{i}][AccessKey]", param.Tags[i].AccessKey);
                 paramDic.Add($"Tags[{i}][Tag]", param.Tags[i].Tag);
                 paramDic.Add($"Tags[{i}][Content]", param.Tags[i].Content.Replace("&", string.Empty));
+                paramDic.Add($"Tags[{i}][UseRanFontFamily]", param.Tags[i].UseRanFontFamily.ToString());
             }
 
             return paramDic;
         }
         #endregion
 
-        #region + GetCustomPathBatchWoffWebFont
+        #region + GetCustomPathFontFace
         /// <summary>
-        /// CreateBatchWoffWebFontAsync 自定义路径接口
+        /// GetCustomPathFontFace 自定义路径接口
         /// </summary>
         /// <param name="param">param</param>
         /// <param name="config">config</param>
         /// <returns></returns>
-        public static IDictionary<string, string> GetCustomPathBatchWoffWebFont(BatchCustomPathWoffFontFaceParam param, YouzikuConfig config)
+        public static IDictionary<string, string> GetCustomPathFontFace(BatchCustomPathWoffFontFaceParam param, YouzikuConfig config)
         {
             ParamValidate.CreateCustomPathBatchWoffWebFont(param);
             //builder batch param

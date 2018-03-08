@@ -21,9 +21,9 @@ namespace Youziku.Settings
 
         /// <summary>
         /// 配置发送请求时所使用的类库;
-        /// [异步]请求可支持两种方式发起Http请求 [HttpWebRequest类 , HttpClient类];
+        /// [异步]请求可支持两种方式发起Http请求 [HttpWebRequest , HttpClient];
         /// [同步]请求则只能使用HttpWebRequest类;
-        /// 默认使用：HttpWebRequest类
+        /// 默认使用：HttpClient
         /// </summary>
         public RequestBehaviorEnum RequestBehavior { get; set; }
     }

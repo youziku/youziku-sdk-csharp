@@ -22,5 +22,10 @@ namespace Youziku.Param
         /// 标签名称
         /// </summary>
         public string Tag { get; set; }
+
+        /// <summary>
+        /// 是否使用随机生成的FontFamily
+        /// </summary>
+        public bool UseRanFontFamily { get; set; }
     }
 }

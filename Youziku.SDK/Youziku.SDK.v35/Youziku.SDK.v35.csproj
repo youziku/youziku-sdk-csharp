@@ -56,7 +56,7 @@
     <Compile Include="Params\CustomPathFontFaceParam.cs" />
     <Compile Include="Params\FontFaceParam.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Result\BatchCustomPathWoffFontFaceResult.cs" />
+    <Compile Include="Result\BatchCustomPathFontFaceResult.cs" />
     <Compile Include="Result\BatchFontFaceResult.cs" />
     <Compile Include="Result\FontFaceResult.cs" />
     <Compile Include="Result\ResponseItemResult.cs" />
