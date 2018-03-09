@@ -63,7 +63,7 @@ namespace Youziku.Common
             /// <summary>
             /// 接口方法CreateBatchWebFontAsync()
             /// </summary>
-            public const string CreateBatchWebFont = "/batchCustomWebFont/CreateBatchWebFontAsync";
+            public const string CreateBatchWebFont = "/batchCustomWebFont/createBatchWebFontAsync";
         }
     }
 }
