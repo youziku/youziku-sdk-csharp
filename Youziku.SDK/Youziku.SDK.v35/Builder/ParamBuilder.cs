@@ -13,7 +13,7 @@ namespace Youziku.Builder
     /// </summary>
     public class ParamBuilder
     {
-        #region + GetFontface 
+        #region + Single 
         /// <summary>
         /// GetFontface接口
         /// </summary>
@@ -35,7 +35,7 @@ namespace Youziku.Builder
         }
         #endregion
 
-        #region + GetBatchFontFace 
+        #region + Batch 
         /// <summary>
         /// GetBatchFontFace接口
         /// </summary>
@@ -63,7 +63,7 @@ namespace Youziku.Builder
         }
         #endregion
 
-        #region + GetCustomPathFontFace
+        #region + CustomPath
         /// <summary>
         /// GetCustomPathFontFace 自定义路径接口
         /// </summary>
