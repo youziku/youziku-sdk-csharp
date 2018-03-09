@@ -1,4 +1,5 @@
-﻿using Youziku.Param;
+﻿using System;
+using Youziku.Param;
 
 namespace Youziku.Test.Util.Impl.Single
 {
@@ -16,7 +17,6 @@ namespace Youziku.Test.Util.Impl.Single
                 UseRanFontFamily = true
             }
             );
-
             //2.WOFF Base64格式（Tag可选）
             var response2 = YouzikuClient.GetWoffBase64StringFontFace(new FontFaceParam
             {
