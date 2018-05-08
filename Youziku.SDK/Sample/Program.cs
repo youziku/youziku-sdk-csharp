@@ -7,13 +7,6 @@ namespace V45Test.Sample
 {
     class Program
     {
-        //初始化方式1
-        //static readonly IYouzikuServiceClient youzikuClient = new YouzikuServiceClient(new YouzikuConfig()
-        //{ 
-        //    Host = "http://service.youziku.com",
-        //    ApiKey = "xxx"
-        //});
-
 
         static void Main(string[] args)
         {
