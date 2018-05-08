@@ -45,6 +45,7 @@
     <Compile Include="Client\BaseServiceClient.cs" />
     <Compile Include="Client\IYouzikuServiceClient.cs" />
     <Compile Include="Client\YouzikuServiceClient.cs" />
+    <Compile Include="Client\YouzikuServiceClientHostString.cs" />
     <Compile Include="Common\RequestBaseParam.cs" />
     <Compile Include="Common\ServiceMethod.cs" />
     <Compile Include="Config\YouzikuConfig.cs" />

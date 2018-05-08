@@ -46,6 +46,9 @@
     <Compile Include="..\Youziku.SDK.v35\Builder\ParamBuilder.cs">
       <Link>Builder\ParamBuilder.cs</Link>
     </Compile>
+    <Compile Include="..\Youziku.SDK.v35\Client\YouzikuServiceClientHostString.cs">
+      <Link>Client\YouzikuServiceClientHostString.cs</Link>
+    </Compile>
     <Compile Include="..\Youziku.SDK.v35\Common\RequestBaseParam.cs">
       <Link>Common\RequestBaseParam.cs</Link>
     </Compile>
@@ -89,6 +92,7 @@
     <Compile Include="Client\IYouzikuServiceClient.cs" />
     <Compile Include="Client\YouzikuServiceClient.cs" />
     <Compile Include="Config\YouzikuConfig.cs" />
+    <Compile Include="Config\YouzikuGlobal.cs" />
     <Compile Include="Core\HttpRequestClient.cs" />
     <Compile Include="Core\THttpClient.cs" />
     <Compile Include="Core\TWebRequest.cs" />

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Net;
 using System.Threading.Tasks;
 using Youziku.Builder;
 using Youziku.Common;
@@ -6,6 +7,8 @@ using Youziku.Core;
 using Youziku.Param;
 using Youziku.Param.Batch;
 using Youziku.Result;
+using Youziku.SDK.Config;
+using Youziku.SDK.v35.Client;
 using Youziku.Settings;
 namespace Youziku.Client
 {
@@ -38,12 +41,12 @@ namespace Youziku.Client
                 case RequestBehaviorEnum.HttpWebRequest:
                     HttpRequestClient = new TWebRequest();
                     break;
-                default:
-                    HttpRequestClient = new THttpClient();
-                    break;
+               
             }
         } 
         #endregion
+
+
 
         #region 构造一个YouzikuClient
         /// <summary>
@@ -57,8 +60,35 @@ namespace Youziku.Client
             if (string.IsNullOrWhiteSpace(config.ApiKey)) throw new ArgumentException(nameof(YouzikuConfig) + " field ApiKey is null or Empty!");
             this._config = config;
             InitRequestInstance(config);
+            if (config.UseHttps)
+            {
+                YouzikuGlobal.Config.UseHttps();
+            }
         }
         #endregion
+
+         
+
+        #region 构造一个YouzikuClient
+        /// <summary>
+        /// 构造一个YouzikuClient
+        /// </summary>
+        /// <param name="apiKey">apiKey</param>
+        /// <param name="useHttps">host</param>
+        public YouzikuServiceClient(string apiKey, bool useHttps)
+        {
+
+            if (string.IsNullOrEmpty(apiKey)) throw new ArgumentException(nameof(YouzikuConfig) + " field ApiKey is null or Empty!");
+            this._config = new YouzikuConfig { Host = useHttps ? YouzikuServiceClientHostString.Https : YouzikuServiceClientHostString.Http, ApiKey = apiKey.Trim(), UseHttps = useHttps };
+            InitRequestInstance(this._config);
+
+            if (useHttps)
+            {
+                YouzikuGlobal.Config.UseHttps();
+            }
+        }
+        #endregion
+
 
         #region 构造一个YouzikuClient
         /// <summary>
@@ -66,7 +96,7 @@ namespace Youziku.Client
         /// </summary>
         /// <param name="apiKey">apiKey</param>
         /// <param name="host">host</param>
-        public YouzikuServiceClient(string apiKey,string host= "http://service.youziku.com")
+        public YouzikuServiceClient(string apiKey,string host= YouzikuServiceClientHostString.Http)
         {
             if (string.IsNullOrWhiteSpace(host)) throw new ArgumentException(nameof(YouzikuConfig) + " field host is null or Empty!");
             if (string.IsNullOrWhiteSpace(apiKey)) throw new ArgumentException(nameof(YouzikuConfig) + " field ApiKey is null or Empty!");

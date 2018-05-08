@@ -34,7 +34,7 @@ namespace Youziku.Client
             {
                 if (HttpRequestClient is THttpClient)
                 {
-                    HttpRequestClient = new TWebRequest();
+                    throw new ArgumentException("同步调用时RequestBehavior不支持HttpClient！");
                 }
                 var jsonResult = HttpRequestClient.Request(url, THttpMethod.Post, paramDic, config.TimeOut);
                 if (string.IsNullOrWhiteSpace(jsonResult)) throw new ArgumentException("接口响应null或Empty!");

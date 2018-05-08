@@ -1,4 +1,5 @@
 ﻿
+using System.Net;
 using Youziku.Common;
 
 namespace Youziku.Settings
@@ -26,6 +27,13 @@ namespace Youziku.Settings
         /// 默认使用：HttpClient
         /// </summary>
         public RequestBehaviorEnum RequestBehavior { get; set; }
+
+        /// <summary>
+        /// 是否发起https请求
+        /// </summary>
+        public bool UseHttps { get; set; }
+
+         
     }
 
     /// <summary>

@@ -5,6 +5,7 @@ using Youziku.Core;
 using Youziku.Param;
 using Youziku.Param.Batch;
 using Youziku.Result;
+using Youziku.SDK.v35.Client;
 using Youziku.Settings;
 
 
@@ -54,7 +55,7 @@ namespace Youziku.Client
         /// </summary>
         /// <param name="apiKey">apiKey</param>
         /// <param name="host">host</param>
-        public YouzikuServiceClient(string apiKey, string host = "http://service.youziku.com")
+        public YouzikuServiceClient(string apiKey, string host =YouzikuServiceClientHostString.Http)
         {
             if (string.IsNullOrEmpty(host)) throw new ArgumentException(nameof(YouzikuConfig) + " field host is null or Empty!");
             if (string.IsNullOrEmpty(apiKey)) throw new ArgumentException(nameof(YouzikuConfig) + " field ApiKey is null or Empty!");
