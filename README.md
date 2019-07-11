@@ -12,11 +12,11 @@ SDK适用于在C#(或其他.NET框架下语言)中调用字体子集化方法。
 @font-face
 {
     font-family: '{fontfamilyname}';
-    src:url(https://cdn.webfont.com/webfonts/custompath/{UserKey}/{Url}.gif);
-    src:url(https://cdn.webfont.com/webfonts/custompath/{UserKey}/{Url}.gif#iefix) format('embedded-opentype'),
-    url(https://cdn.webfont.com/webfonts/custompath/{UserKey}/{Url}.png) format('woff2'),
-    url(https://cdn.webfont.com/webfonts/custompath/{UserKey}/{Url}.bmp) format('woff'),
-    url(https://cdn.webfont.com/webfonts/custompath/{UserKey}/{Url}.jpg) format('truetype');
+    src:url(https://cdn.repository.webfont.com/webfonts/custompath/{UserKey}/{Url}.gif);
+    src:url(https://cdn.repository.webfont.com/webfonts/custompath/{UserKey}/{Url}.gif#iefix) format('embedded-opentype'),
+    url(https://cdn.repository.webfont.com/webfonts/custompath/{UserKey}/{Url}.png) format('woff2'),
+    url(https://cdn.repository.webfont.com/webfonts/custompath/{UserKey}/{Url}.bmp) format('woff'),
+    url(https://cdn.repository.webfont.com/webfonts/custompath/{UserKey}/{Url}.jpg) format('truetype');
 }
 
 /* 
@@ -32,11 +32,11 @@ SDK适用于在C#(或其他.NET框架下语言)中调用字体子集化方法。
 @font-face
 {
     font-family: 'NotoSansCJKsc-light';
-    src:url(https://cdn.webfont.com/webfonts/custompath/89B7CC9B4E975C85/page15.gif);
-    src:url(https://cdn.webfont.com/webfonts/custompath/89B7CC9B4E975C85/page15.gif#iefix) format('embedded-opentype'),
-    url(https://cdn.webfont.com/webfonts/custompath/89B7CC9B4E975C85/page15.png) format('woff2'),
-    url(https://cdn.webfont.com/webfonts/custompath/89B7CC9B4E975C85/page15.bmp) format('woff'),
-    url(https://cdn.webfont.com/webfonts/custompath/89B7CC9B4E975C85/page15.jpg) format('truetype');
+    src:url(https://cdn.repository.webfont.com/webfonts/custompath/89B7CC9B4E975C85/page15.gif);
+    src:url(https://cdn.repository.webfont.com/webfonts/custompath/89B7CC9B4E975C85/page15.gif#iefix) format('embedded-opentype'),
+    url(https://cdn.repository.webfont.com/webfonts/custompath/89B7CC9B4E975C85/page15.png) format('woff2'),
+    url(https://cdn.repository.webfont.com/webfonts/custompath/89B7CC9B4E975C85/page15.bmp) format('woff'),
+    url(https://cdn.repository.webfont.com/webfonts/custompath/89B7CC9B4E975C85/page15.jpg) format('truetype');
 }
 ```
 
