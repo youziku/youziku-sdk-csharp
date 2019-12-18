@@ -1,11 +1,15 @@
 # 1、介绍
 
-### SDK适用语言
+## 1．SDK适用语言
 SDK适用于在C#(或其他.NET框架下语言)中调用字体子集化方法。
 
-### 显示字体效果
-用户可自定义字体存放路径，当需要显示字体效果时，可以根据自己当初所定义的路径拼组出@font-face语句，然后将语句插入到前端页面的<style>标签中，即可使内容显示字体效果。
-
+## 2. SDK工作流程<br/>　
+   ①用户用后端程序调用SDK，提交内容到有字库的子集化(裁切)服务器<br/>
+   ②服务器接收到所提交内容后，根据内容裁剪出对应的小字体文件，并转换为4种通用字体格式（woff、eot、ttf、svg）<br/>
+   ③服务器将所有字体文件按用户指定的地址上传至阿里云CDN(如果是非敏捷模式，则会通过SDK返回@font-face语句)<br/>
+   ④用户在页面上通过@font-face语句(自行拼组或调取SDK返回的)引用CDN上保存的字体文件，即可使页面上的文字显示出特定的字体效果<br/>
+## 3.@font-face语句<br/>
+SDK的返回值主要内容是@font-face语句，@font-face语句是CSS3中的一个功能模块，是所有浏览器天然支持的CSS语句。它的作用是将一个远程字体文件加载到当前页面，并且定义成一个字体，前端页面能够像使用本地字体一样使用该字体。@font-face语句是实现在线字体效果的核心代码。<br/>
 ### @font-face语句拼组
 @font-face语句拼组格式如下：
 ```css
@@ -27,18 +31,21 @@ SDK适用于在C#(或其他.NET框架下语言)中调用字体子集化方法。
 {Url}即是调用接口时所提交的参数(url)。
 */
 ```
-例如：
+例如（UserKey为"89B7CC9B4E975C85";url为"page15/h1"）：
 ```css
 @font-face
 {
     font-family: 'NotoSansCJKsc-light';
-    src:url(https://cdn.repository.webfont.com/webfonts/custompath/89B7CC9B4E975C85/page15.gif);
-    src:url(https://cdn.repository.webfont.com/webfonts/custompath/89B7CC9B4E975C85/page15.gif#iefix) format('embedded-opentype'),
-    url(https://cdn.repository.webfont.com/webfonts/custompath/89B7CC9B4E975C85/page15.png) format('woff2'),
-    url(https://cdn.repository.webfont.com/webfonts/custompath/89B7CC9B4E975C85/page15.bmp) format('woff'),
-    url(https://cdn.repository.webfont.com/webfonts/custompath/89B7CC9B4E975C85/page15.jpg) format('truetype');
+    src:url(https://cdn.repository.webfont.com/webfonts/custompath/89B7CC9B4E975C85/page15/h1.gif);
+    src:url(https://cdn.repository.webfont.com/webfonts/custompath/89B7CC9B4E975C85/page15/h1.gif#iefix) format('embedded-opentype'),
+    url(https://cdn.repository.webfont.com/webfonts/custompath/89B7CC9B4E975C85/page15/h1.png) format('woff2'),
+    url(https://cdn.repository.webfont.com/webfonts/custompath/89B7CC9B4E975C85/page15/h1.bmp) format('woff'),
+    url(https://cdn.repository.webfont.com/webfonts/custompath/89B7CC9B4E975C85/page15/h1.jpg) format('truetype');
 }
 ```
+## 4. 显示字体效果
+敏捷模式：用户<a href="#user-content-4自定义路径生成模式">自定义字体存放路径</a>，当需要显示字体效果时，可以根据自己所定义的路径<a href="http://service.youziku.com/index.html#format" target="_blank" style="color: #ff7e00;">拼组出@font-face语句</a>，然后将语句输出到前端页面，即可使内容显示字体效果。<br />
+非敏捷模式：用户在提交内容到SDK时，需要等待SDK返回的结果（@font-face语句），并随内容对应保存到数据库中，当需要显示字体效果时，调取与内容相对应的@font-face语句，然后将语句输出到前端页面，即可使内容显示字体效果。
 
 
 # 2、环境
